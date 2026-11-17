@@ -83,7 +83,7 @@
 
     <p>Have a question? Send us a message.</p>
 
-    <form id="contactForm" action="PASTE_YOUR_FORMSPREE_LINK_HERE" method="POST">
+    <form id="contactForm" action="YOUR_FORMSPREE_ENDPOINT" method="POST"></form>
    
 
       <label>Your Full Name</label>  
@@ -100,17 +100,7 @@
 
 </section>
 <script>;  
-const contactForm = document.getElementById("contactForm");
-const formMessage = document.getElementById("formMessage");
 
-contactForm.addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    formMessage.textContent = "Thank you for choosing Amos Web Solutions. We will get back to you soon!";
-    formMessage.style.color = "green";
-
-    contactForm.reset();
-});
 </script>
 <footer>
 
