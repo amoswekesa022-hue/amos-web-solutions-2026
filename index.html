@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amos Web Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+ 
+<nav>
+    <h2>Amos Web Solutions</h2>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+   
+
+ <h1 id="home">Welcome to Amos Web Solutions</h1> 
+   <img src="workspace.jpg" alt="Amos Web Solutions workspace" class="hero-image">
+ <div class="hero-content">
+
+    <h2>We Build Websites That Grow Your Business</h2>
+
+    <p>
+        We help businesses attract customers, showcase their services
+        and grow online through professional website design.
+    </p>
+
+    <a href="#contact">
+        <button type="button">Get a Free Quote</button>
+    </a>
+
+</div>  
+
+<h2 id="about">About Us</h2>
+
+    <p>We create professional websites for businesses.</p>
+
+    <section id="services">
+
+    <h2>Our Services</h2>
+
+    <div class="service">
+        <h3>Business Website Design</h3>
+        <p>We design attractive websites for businesses.</p>
+    </div>
+
+    <div class="service">
+        <h3>E-commerce Website Development</h3>
+        <p>We build functional websites for our clients.</p>
+    </div>
+
+    <div class="service">
+        <h3>Website Maintenance and support</h3>
+        <p>We help businesses keep their websites updated.</p>
+    </div>
+
+</section>
+
+ <section id="contact">
+
+    <h2>Contact Us</h2>
+    <a href="https://wa.me/254180552703" target="_blank">
+    <button type="button">Chat with us on WhatsApp</button>
+</a>
+    
+<!DOCTYPE html>
+<html>
+    <title>Amos Web Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+ 
+<nav>
+    <h2>Amos Web Solutions</h2>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+
+    <p>Have a question? Send us a message.</p>
+
+    <form id="contactForm">
+   
+
+      <label>Your Full Name</label>  
+      <input type="text" placeholder="Enter your name" required>  
+
+        <label>Email Address</label>
+     <input type="email" placeholder="example@gmail.com" required>   
+
+        <label>Your Message</label>
+<textarea placeholder="Write your message" required></textarea>
+<button type="submit">Submit Inquiry</button>
+</form>
+<p id="formMessage"></p>
+
+</section>
+<script>;  
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+contactForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    formMessage.textContent = "Thank you for choosing Amos Web Solutions. We will get back to you soon!";
+    formMessage.style.color = "green";
+
+    contactForm.reset();
+});
+</script>
+<footer>
+
+    <h3>Amos Web Solutions</h3>
+
+    <p>Building professional websites for businesses.</p>
+
+    <p>Email: amoswebsolutions@gmail.com</p>
+
+    <p>&copy; 2026 Amos Web Solutions. All rights reserved.</p>
+
+</footer>
+</body>
+</html>
+

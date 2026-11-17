@@ -1,0 +1,208 @@
+
+/* General page styling */
+body {
+    background-color: #bfd30d;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+}
+
+/* Main heading */
+h1 {
+    color: rgb(139, 0, 81);
+    text-align: center;
+    font-size: 36px;
+}
+
+/* Subheadings */
+h2 {
+    color: #198754;
+}
+
+/* Paragraphs */
+p {
+    color: #444444;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Contact button */
+button {
+    background-color: rgb(23, 139, 0);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* Mobile-friendly design */
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    nav {
+    background-color: #172554;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;        
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    #services {
+        padding: 10px;
+    }
+
+    .service {
+        width: auto;
+        margin: 15px 0;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+/* Contact form */
+#contact {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    height: 120px;
+}
+
+form button {
+    margin-top: 15px;
+}
+/* Professional service cards */
+
+#services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.service {
+    background-color: white;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+.service h3 {
+    color: #172554;
+    font-size: 22px;
+}
+
+.service p {
+    color: #555;
+    line-height: 1.6;
+}
+/* Homepage banner image */
+.hero-image {
+    width: 100%;
+    max-width: 900px;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+/* Professional website footer */
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 40px;
+}
+
+footer h3 {
+    color: white;
+    font-size: 24px;
+}
+
+footer p {
+    color: white;
+    font-size: 15px;
+}
+/* Homepage introduction */
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px 20px;
+}
+
+.hero-content h2 {
+    color: #172554;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hero-content button {
+    background-color: #198754;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.hero-content button:hover {
+    background-color: #146c43;
+}
