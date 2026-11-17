@@ -1,17 +1,44 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <title>Amos Web Solutions | Professional Website Design in Kenya</title>
+
+    <meta name="description" content="Amos Web Solutions creates affordable, professional and mobile-friendly websites for businesses in Kenya.">
+
+    <meta name="keywords" content="website design Kenya, affordable web design, business websites, website development Kenya">
+
+    <meta name="author" content="Amos Web Solutions">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amos Web Solutions</title>
+
+<meta property="og:title" content="Amos Web Solutions | Website Design in Kenya">
+
+<meta property="og:description" content="Affordable, professional and mobile-friendly websites for businesses in Kenya.">
+
+<meta property="og:type" content="website">
+
+<meta property="og:url" content="https://amoswekesa022-hue.github.io/amos-web-solutions-2026/">
+
+<link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
+   <div id="loader">
+    <div class="spinner"></div>
+    <h3>Amos Web Solutions</h3>
+    <p>Loading your experience...</p>
+</div> 
 
 <nav>
+<div class="brand">
+    <img src="logo.png" alt="Amos Web Solutions Logo">
     <h2>Amos Web Solutions</h2>
+</div>
+    <button id="menu-toggle">☰</button>
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -47,20 +74,65 @@
 <section id="services">
     <h2>Our Services</h2>
 
-    <div class="service">
+<div class="service-card reveal"></div>
         <h3>Business Website Design</h3>
         <p>We design attractive websites for businesses.</p>
     </div>
 
-    <div class="service">
+    <div class="service-card reveal"></div>
         <h3>E-commerce Website Development</h3>
         <p>We build functional websites for our clients.</p>
     </div>
 
-    <div class="service">
+    <div class="service-card reveal"></div>
         <h3>Website Maintenance and Support</h3>
         <p>We help businesses keep their websites updated.</p>
     </div>
+</section>
+
+
+<section id="pricing">
+    <h2>Our Website Packages</h2>
+    <p>Choose a package that suits your business.</p>
+<div class="pricing-container">
+
+    
+<div class="pricing-card reveal">
+    <h3>Basic Website</h3>
+    <h2>KSh 3,000</h2>
+    <p>Perfect for small businesses.</p>
+    <ul>
+        <li>One-page website</li>
+        <li>Mobile-friendly design</li>
+        <li>Contact information</li>
+    </ul>
+    <a href="#contact">Get Started</a>
+</div>
+
+<div class="pricing-card reveal">
+    <h3>Business Website</h3>
+    <h2>KSh 6,000</h2>
+    <p>For growing businesses.</p>
+    <ul>
+        <li>Up to five pages</li>
+        <li>Professional design</li>
+        <li>Contact form</li>
+    </ul>
+    <a href="#contact">Get Started</a>
+</div>
+
+<div class="pricing-card reveal">
+    <h3>E-commerce Website</h3>
+    <h2>KSh 12,000</h2>
+    <p>For online stores.</p>
+    <ul>
+        <li>Product listings</li>
+        <li>Shopping cart</li>
+        <li>Mobile-friendly design</li>
+    </ul>
+    <a href="#contact">Get Started</a>
+</div>
+
 </section>
 
 <section id="testimonials">
@@ -75,6 +147,8 @@
         <p>"The website design was simple, attractive and easy to use."</p>
         <h3>— Client testimonial</h3>
     </div>
+
+ </div>   
 </section>
 
 
@@ -87,23 +161,25 @@
         <button type="button">Chat with us on WhatsApp</button>
     </a>
 
-    <form action="https://formspree.io/f/mqpqqagj" method="POST">
+     
+<form id="contact-form" action="https://formspree.io/f/mqpqqagj" method="POST">
+    <label>Your Full Name</label>
+    <input type="text" name="name"
+           placeholder="Enter your name" required>
 
-        <label>Your Full Name</label>
-        <input type="text" name="name"
-               placeholder="Enter your name" required>
+    <label>Email Address</label>
+    <input type="email" name="email"
+           placeholder="example@gmail.com" required>
 
-        <label>Email Address</label>
-        <input type="email" name="email"
-               placeholder="example@gmail.com" required>
+    <label>Your Message</label>
+    <textarea name="message"
+              placeholder="Write your message" required></textarea>
 
-        <label>Your Message</label>
-        <textarea name="message"
-                  placeholder="Write your message" required></textarea>
+    <button type="submit">Submit Inquiry</button>
 
-        <button type="submit">Submit Inquiry</button>
+</form>
+<p id="form-status" aria-live="polite"></p>
 
-    </form>
 </section>
 
 <footer>
@@ -112,6 +188,99 @@
     <p>Email: amoswebsolutions@gmail.com</p>
     <p>&copy; 2026 Amos Web Solutions. All rights reserved.</p>
 </footer>
+
+
+<a href="https://wa.me/254180552703"
+   class="floating-whatsapp"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp">
+
+    <span class="whatsapp-icon">☏</span>
+    <span>Chat with us</span>
+
+</a>
+
+<script>
+    const menuButton = document.getElementById("menu-toggle");
+    const navigation = document.querySelector("nav ul");
+
+    menuButton.addEventListener("click", function() {
+        navigation.classList.toggle("show-menu");
+    });
+  const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+contactForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    formStatus.textContent = "Sending your message...";
+
+    fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: {
+            "Accept": "application/json"
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            formStatus.textContent = "Thank you! Your message has been sent successfully.";
+            contactForm.reset();
+        } else {
+            formStatus.textContent = "Sorry, something went wrong. Please try again.";
+        }
+    })
+    .catch(error => {
+        formStatus.textContent = "Network error. Please check your internet and try again.";
+    });
+});
+window.addEventListener("load", function() {
+    const loader = document.getElementById("loader");
+
+    loader.style.opacity = "0";
+    loader.style.transition = "opacity 0.6s ease";
+
+    setTimeout(function() {
+        loader.style.display = "none";
+    }, 600);
+});
+</script>
+<button id="back-to-top" title="Back to top">
+    ↑
+</button>
+<script>
+const backToTop = document.getElementById("back-to-top");
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+backToTop.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+        }
+    });
+});
+
+revealElements.forEach(function(element) {
+    revealObserver.observe(element);
+});
+</script>
+
 
 </body>
 </html>
