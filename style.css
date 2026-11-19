@@ -36,27 +36,18 @@ button {
     cursor: pointer;
 }
 /* Mobile-friendly design */
+
 @media (max-width: 600px) {
-
-    body {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 26px;
-    }
-
     nav {
-    background-color: #172554;
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;        
+        background-color: #172554;
+        color: white;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: static;
     }
+}
 
     nav ul {
         flex-direction: column;
@@ -584,4 +575,15 @@ nav ul li a:hover {
 .brand h2 {
     color: white;
     font-size: 22px;
+}
+
+/* Smaller back-to-top arrow */
+#back-to-top {
+    width: 40px !important;
+    height: 40px;
+    padding: 0 !important;
+    font-size: 18px;
+    display: none;
+    align-items: center;
+    justify-content: center;
 }
